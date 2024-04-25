@@ -44,15 +44,16 @@ function Categories() {
   const [selectedCategory, setSelectedCategory] = useState<string>("0"); 
   const navigate = useNavigate();
   const [categoryAvailable, setCategoryAvailable] = useState(true);
+  const [selectedDifficulty, setSelectedDifficulty] = useState<string>("easy");
 
   useEffect(() => {
     if (loaded) {
       navigate('/question', { state: { questions } }); 
     }
-  }, [loaded, questions, selectedCategory, navigate]);
+  }, [loaded, questions, selectedCategory, selectedDifficulty, navigate]);
 
   const trigQuestions = () => {
-    getQuestionsData(selectedCategory).then((data) => {
+    getQuestionsData(selectedCategory, selectedDifficulty).then((data) => {
       setQuestions(data);
       if (data && data.length > 0) {
         setLoaded(true);
@@ -62,11 +63,14 @@ function Categories() {
     });
   };
   
-  
-
   const handleCategorySelect = (categoryValue: string) => {
     console.log(categoryValue);
     setSelectedCategory(categoryValue);
+  }
+
+  const handleDifficultySelect = (difficulty: string) => {
+    console.log(difficulty);
+    setSelectedDifficulty(difficulty);
   }
 
   return (
@@ -86,6 +90,16 @@ function Categories() {
         
       </nav>
       <div className="container-fluid">
+        <div className="text-white">
+          <h2 className="text-center mb-3">Escolha a dificuldade</h2>
+          <div className="d-flex justify-content-center mb-5">
+          <select className="form-select" value={selectedDifficulty} onChange={(e) => handleDifficultySelect(e.target.value)}>
+              <option value="easy">Fácil</option>
+              <option value="medium">Médio</option>
+              <option value="hard">Difícil</option>
+            </select>
+          </div>
+        </div>
         <div className='text-white'>
           <h2 className="text-center mb-5">Escolha uma categoria</h2>
         </div>

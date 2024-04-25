@@ -82,7 +82,8 @@ function QuizzNavigation({ questions, onSubmit }: Props) {
               onClick={() => setCurrentQuestion(index)}
               className={
                 "question_button" +
-                (index === currentQuestion ? " question_active" : "")
+                (index === currentQuestion ? " question_active" : "") +
+                (userAnswers[index] !== -1 ? " question_answered" : " question_unanswered")
               }
             >
               {index + 1}

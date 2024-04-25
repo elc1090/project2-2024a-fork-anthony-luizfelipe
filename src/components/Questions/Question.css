@@ -54,3 +54,12 @@
 .answer_card{
     border-radius: 10px;
 }
+
+.question_button.question_answered {
+    background-color: #FF9A30;
+}
+  
+.question_button.question_unanswered {
+    background-color: #ffffff;
+    color: #0B132B;
+}

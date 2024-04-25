@@ -5,10 +5,12 @@ export type question = {
   userAnswer?: number;
 }
 
-async function fetchQuestionsData(category : any) {
+async function fetchQuestionsData(category : any, difficulty : string) {
     try {
-      const response = await fetch(`https://opentdb.com/api.php?amount=10&
-        ${category == 0 ? "" : `category=${category}`}&type=multiple`);
+      const url = `https://opentdb.com/api.php?amount=10&
+      ${category == 0 ? "" : `category=${category}`}&difficulty=${difficulty}&type=multiple`;
+      console.log(url);
+      const response = await fetch(url);
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }
@@ -46,8 +48,8 @@ function processQuestionsData(data: any) : question[] {
   return processedQuestions;
 }
   
-export async function getQuestionsData(category :any) {
-    const rawData = await fetchQuestionsData(category);
+export async function getQuestionsData(category :any, difficulty: string) {
+    const rawData = await fetchQuestionsData(category, difficulty);
     const processedData = processQuestionsData(rawData);
     return processedData;
 }
