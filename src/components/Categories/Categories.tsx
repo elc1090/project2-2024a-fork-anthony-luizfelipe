@@ -64,12 +64,10 @@ function Categories() {
   };
   
   const handleCategorySelect = (categoryValue: string) => {
-    console.log(categoryValue);
     setSelectedCategory(categoryValue);
   }
 
   const handleDifficultySelect = (difficulty: string) => {
-    console.log(difficulty);
     setSelectedDifficulty(difficulty);
   }
 
