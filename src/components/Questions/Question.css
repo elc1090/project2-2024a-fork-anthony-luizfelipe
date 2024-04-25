@@ -7,13 +7,13 @@
 }
 
 .question_button:hover {
-    background-color: #2A9D8F !important;
+    background-color: #FF9A30 !important;
     color: white;
     transform: scale(1.05);
 }
 
 .question_active {
-    background-color: #2A9D8F !important;
+    background-color: #FF9A30 !important;
     color: black;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .question_button.question_answered {
-    background-color: #FF9A30;
+    background-color: #2A9D8F;
 }
   
 .question_button.question_unanswered {
