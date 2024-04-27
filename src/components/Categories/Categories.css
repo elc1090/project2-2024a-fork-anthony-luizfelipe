@@ -32,7 +32,10 @@
     font-weight: bold;
     position: absolute;
   }
-
+  .text-select{
+    font-weight: bold;
+    color: #FF9A30;
+  }
   
 /* categories.css */
 

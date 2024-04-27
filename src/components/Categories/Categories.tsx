@@ -92,7 +92,7 @@ function Categories() {
           <h2 className=" text-center mb-3">Escolha a dificuldade</h2>
         </div>
         <div className="d-flex justify-content-center align-items-center mb-5">
-          <select className="form-select w-25" value={selectedDifficulty} onChange={(e) => handleDifficultySelect(e.target.value)}>
+          <select className="text-select form-select w-25" value={selectedDifficulty} onChange={(e) => handleDifficultySelect(e.target.value)}>
             <option value="easy">Fácil</option>
             <option value="medium">Médio</option>
             <option value="hard">Difícil</option>
