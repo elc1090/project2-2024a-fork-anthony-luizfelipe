@@ -87,17 +87,18 @@ function Categories() {
         </div>
         
       </nav>
-      <div className="container-fluid">
+      <div className=" container-fluid">
         <div className="text-white">
-          <h2 className="text-center mb-3">Escolha a dificuldade</h2>
-          <div className="d-flex justify-content-center mb-5">
-          <select className="form-select" value={selectedDifficulty} onChange={(e) => handleDifficultySelect(e.target.value)}>
-              <option value="easy">Fácil</option>
-              <option value="medium">Médio</option>
-              <option value="hard">Difícil</option>
-            </select>
-          </div>
+          <h2 className=" text-center mb-3">Escolha a dificuldade</h2>
         </div>
+        <div className="d-flex justify-content-center align-items-center mb-5">
+          <select className="form-select w-25" value={selectedDifficulty} onChange={(e) => handleDifficultySelect(e.target.value)}>
+            <option value="easy">Fácil</option>
+            <option value="medium">Médio</option>
+            <option value="hard">Difícil</option>
+          </select>
+        </div>
+        
         <div className='text-white'>
           <h2 className="text-center mb-5">Escolha uma categoria</h2>
         </div>
