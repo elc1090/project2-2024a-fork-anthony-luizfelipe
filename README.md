@@ -2,7 +2,7 @@
 
 ![Substitua a imagem ao lado por um screenshot do seu projeto](https://github.com/elc1090/project2-2024a-jhuan-e-flavio/blob/main/marselo.png)
 
-Acesso: https://lambda-quiz.vercel.app/
+Acesso: https://project2-2024a-fork-anthony-luizfelipe.vercel.app/
 
 
 ### Desenvolvedores
